@@ -99,4 +99,4 @@ path/to/subdir/file3.ext
 
 ## License
 
-This script is provided as-is. You are free to use and modify it. Consider providing attribution if distributing significantly modified versions. (You could formally add an MIT or similar open-source license if desired).
+This project is licensed under the MIT License - see the LICENSE.md file for details.
