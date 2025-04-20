@@ -1,5 +1,8 @@
 # Git Source Code Consolidator (PowerShell)
 
+Author: Tech Nomad
+Twitter: https://x.com/Tech_N0mad
+
 This PowerShell script gathers source code files tracked by Git within a repository, filters out common non-source files (like binaries, images, dependencies, test files), and concatenates their paths and contents into a single output file (`output.txt` by default).
 
 This is useful for creating a context package for code analysis, sharing relevant project files, or providing input to language models.
