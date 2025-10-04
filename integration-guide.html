@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Theme Integration Guide</title>
+  <link rel="stylesheet" href="theme.css">
+  <style>
+    /* Additional demo-specific styles */
+    .demo-section {
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .component-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+
+    .code-block {
+      background: var(--color-bg-secondary);
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: var(--spacing-sm);
+      margin: var(--spacing-sm) 0;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      color: var(--color-accent);
+      font-size: 14px;
+    }
+
+    .slider-demo {
+      margin: var(--spacing-md) 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Hero Section -->
+    <header class="text-center fade-in" style="margin: var(--spacing-2xl) 0;">
+      <h1>Futuristic Space Theme</h1>
+      <p style="font-size: var(--font-size-lg); max-width: 800px; margin: var(--spacing-md) auto;">
+        A comprehensive design system inspired by NASA dashboards and space visualization interfaces.
+        Complete with glassmorphism, neon accents, and immersive animations.
+      </p>
+    </header>
+
+    <!-- Quick Start Guide -->
+    <section class="demo-section fade-in">
+      <div class="card card-accent">
+        <h2>Quick Start Integration</h2>
+        <p>To apply this theme to your existing project, follow these steps:</p>
+
+        <div class="code-block">
+          <code>&lt;!-- Add to your HTML head section --&gt;<br>
+&lt;link rel="stylesheet" href="theme.css"&gt;</code>
+        </div>
+
+        <h4 style="margin-top: var(--spacing-md);">Apply Theme Classes</h4>
+        <ul style="color: var(--color-muted); line-height: 2;">
+          <li>Wrap content in <code>&lt;div class="container"&gt;</code></li>
+          <li>Use <code>.card</code> or <code>.panel</code> for glassmorphism containers</li>
+          <li>Add <code>.fade-in</code> for entrance animations</li>
+          <li>Use <code>.pulse-glow</code> for active elements</li>
+          <li>Apply <code>.btn</code> or <code>.btn-primary</code> to buttons</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Typography Examples -->
+    <section class="demo-section fade-in">
+      <h2>Typography System</h2>
+      <div class="component-grid">
+        <div class="card">
+          <h4>Heading Examples</h4>
+          <h1 style="font-size: 48px; margin: var(--spacing-sm) 0;">H1 Orbitron</h1>
+          <h2 style="font-size: 32px; margin: var(--spacing-sm) 0;">H2 Orbitron</h2>
+          <h3 style="margin: var(--spacing-sm) 0;">H3 Orbitron</h3>
+          <h4 style="margin: var(--spacing-sm) 0;">H4 Orbitron</h4>
+        </div>
+
+        <div class="card">
+          <h4>Body & Technical Text</h4>
+          <p>This is body text using Space Grotesk. It's clean, modern, and highly readable for interfaces and content.</p>
+          <label class="data-label">Technical Label</label>
+          <div class="data-value" style="font-size: 24px;">1,024 KM</div>
+          <small class="text-muted">Small text for metadata</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Color System -->
+    <section class="demo-section fade-in">
+      <h2>Color Palette</h2>
+      <div class="component-grid">
+        <div class="card">
+          <h4>Primary Colors</h4>
+          <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-sm);">
+            <div style="width: 60px; height: 60px; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 10px;"></div>
+            <div style="width: 60px; height: 60px; background: var(--color-accent); border-radius: 10px; box-shadow: var(--shadow-glow);"></div>
+            <div style="width: 60px; height: 60px; background: var(--color-text); border-radius: 10px;"></div>
+          </div>
+          <div style="margin-top: var(--spacing-xs);">
+            <small class="data-label">Background • Accent • Text</small>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>Glassmorphism Effect</h4>
+          <div style="background: var(--glass-bg); backdrop-filter: blur(12px); border: 1px solid var(--glass-border); border-radius: 15px; padding: var(--spacing-sm); margin-top: var(--spacing-sm);">
+            <p style="margin: 0;">Frosted glass with subtle transparency and backdrop blur for depth</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Button Examples -->
+    <section class="demo-section fade-in">
+      <h2>Interactive Elements</h2>
+      <div class="card">
+        <h4>Buttons</h4>
+        <div style="display: flex; gap: var(--spacing-sm); flex-wrap: wrap; margin-top: var(--spacing-sm);">
+          <button class="btn-primary">Primary Action</button>
+          <button>Default Button</button>
+          <button class="btn-secondary">Secondary</button>
+          <button disabled>Disabled</button>
+        </div>
+
+        <h4 style="margin-top: var(--spacing-md);">Custom Sliders</h4>
+        <div class="slider-demo">
+          <label class="data-label">Velocity Control</label>
+          <input type="range" min="0" max="100" value="50">
+        </div>
+        <div class="slider-demo">
+          <label class="data-label">Gravity Intensity</label>
+          <input type="range" min="0" max="100" value="75">
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Elements -->
+    <section class="demo-section fade-in">
+      <h2>Form Components</h2>
+      <div class="component-grid">
+        <div class="card">
+          <h4>Input Fields</h4>
+          <div style="margin-top: var(--spacing-sm);">
+            <label class="data-label">Mission Name</label>
+            <input type="text" placeholder="Enter mission designation...">
+          </div>
+          <div style="margin-top: var(--spacing-sm);">
+            <label class="data-label">Coordinate Value</label>
+            <input type="number" placeholder="0.00">
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>Data Display</h4>
+          <div style="margin-top: var(--spacing-sm);">
+            <label class="data-label">System Status</label>
+            <div class="data-value">OPERATIONAL</div>
+          </div>
+          <div style="margin-top: var(--spacing-sm);">
+            <span class="badge">ACTIVE</span>
+            <span class="badge" style="margin-left: var(--spacing-xs);">SECURED</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Card Examples -->
+    <section class="demo-section fade-in">
+      <h2>Card Components</h2>
+      <div class="component-grid">
+        <div class="card pulse-glow">
+          <h4>Standard Card</h4>
+          <p>Glassmorphism card with hover effects and smooth transitions. Perfect for containing controls and information.</p>
+          <button>View Details</button>
+        </div>
+
+        <div class="card card-accent">
+          <h4>Accent Card</h4>
+          <p>Featured card with cyan border glow for highlighting important sections or active states.</p>
+          <button class="btn-primary">Take Action</button>
+        </div>
+
+        <div class="card">
+          <h4>Data Card</h4>
+          <label class="data-label">Distance Traveled</label>
+          <div class="data-value">847.2 KM</div>
+          <label class="data-label" style="margin-top: var(--spacing-sm);">Fuel Remaining</label>
+          <div class="data-value">62%</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Animation Examples -->
+    <section class="demo-section fade-in">
+      <h2>Animations & Effects</h2>
+      <div class="component-grid">
+        <div class="card fade-in">
+          <h4>Fade In</h4>
+          <p>Smooth entrance animation with upward motion. Applied using <code>.fade-in</code> class.</p>
+        </div>
+
+        <div class="card pulse-glow">
+          <h4>Pulse Glow</h4>
+          <p>Continuous glowing animation for attention. Use <code>.pulse-glow</code> on active elements.</p>
+        </div>
+
+        <div class="card">
+          <h4 class="text-glow">Text Glow</h4>
+          <p>Add <code>.text-glow</code> to create illuminated text effects for emphasis.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CSS Variables Reference -->
+    <section class="demo-section fade-in">
+      <div class="card">
+        <h2>CSS Variables Reference</h2>
+        <p>All theme values are available as CSS custom properties:</p>
+
+        <div class="code-block">
+          <code>/* Colors */<br>
+var(--color-bg)<br>
+var(--color-accent)<br>
+var(--color-text)<br>
+var(--color-muted)<br><br>
+/* Spacing */<br>
+var(--spacing-xs) /* 8px */<br>
+var(--spacing-sm) /* 16px */<br>
+var(--spacing-md) /* 24px */<br>
+var(--spacing-lg) /* 32px */<br><br>
+/* Fonts */<br>
+var(--font-heading) /* Orbitron */<br>
+var(--font-body) /* Space Grotesk */<br>
+var(--font-technical) /* Rajdhani */</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- Responsive Grid -->
+    <section class="demo-section fade-in">
+      <h2>Layout System</h2>
+      <div class="card">
+        <h4>Responsive Grid</h4>
+        <p>Built-in grid utilities for responsive layouts:</p>
+        <div class="grid grid-3" style="margin-top: var(--spacing-md);">
+          <div style="background: var(--glass-bg); padding: var(--spacing-sm); border-radius: 10px; text-align: center;">
+            <span class="data-label">Grid Item 1</span>
+          </div>
+          <div style="background: var(--glass-bg); padding: var(--spacing-sm); border-radius: 10px; text-align: center;">
+            <span class="data-label">Grid Item 2</span>
+          </div>
+          <div style="background: var(--glass-bg); padding: var(--spacing-sm); border-radius: 10px; text-align: center;">
+            <span class="data-label">Grid Item 3</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center fade-in" style="margin: var(--spacing-2xl) 0; padding-top: var(--spacing-xl); border-top: 1px solid var(--color-border);">
+      <h3 class="text-glow">Ready for Launch</h3>
+      <p class="text-muted">Integrate this theme into your project and transform it into a futuristic space interface.</p>
+      <button class="btn-primary" style="margin-top: var(--spacing-md);">Start Integration</button>
+    </footer>
+  </div>
+</body>
+</html>
